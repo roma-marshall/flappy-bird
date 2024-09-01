@@ -17,6 +17,11 @@ class MenuScene extends BaseScene {
 
     this.add.image(70, 100, 'cloud').setOrigin(0)
     this.add.image(260, 200, 'cloud').setOrigin(0)
+
+    this.bird = this.physics.add.sprite(300, 200, 'bird')
+      .setFlipX(true)
+      .setScale(2)
+      .setOrigin(0, 0)
   }
 
   setupMenuEvents(menuItem) {
