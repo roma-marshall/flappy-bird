@@ -10,8 +10,8 @@ class PlayScene extends BaseScene {
     this.pipes = null
     this.isPaused = false
 
-    this.pipeVerticalDistanceRange = [150, 250]
-    this.pipeHorizontalDistanceRange = [500, 550]
+    this.pipeVerticalDistanceRange = [230, 300]
+    this.pipeHorizontalDistanceRange = [380, 380]
     this.flapVelocity = 300
 
     this.score = 0
@@ -21,19 +21,19 @@ class PlayScene extends BaseScene {
     this.difficulties = {
       'kind': {
         pipeVerticalDistanceRange: [230, 300],
-        pipeHorizontalDistanceRange: [330, 380]
+        pipeHorizontalDistanceRange: [380, 380]
       },
       'easy': {
-        pipeVerticalDistanceRange: [150, 200],
-        pipeHorizontalDistanceRange: [300, 350]
+        pipeVerticalDistanceRange: [210, 280],
+        pipeHorizontalDistanceRange: [370, 380]
       },
       'normal': {
-        pipeVerticalDistanceRange: [140, 190],
-        pipeHorizontalDistanceRange: [280, 330]
+        pipeVerticalDistanceRange: [190, 260],
+        pipeHorizontalDistanceRange: [370, 380]
       },
       'hard': {
-        pipeVerticalDistanceRange: [100, 150],
-        pipeHorizontalDistanceRange: [250, 310]
+        pipeVerticalDistanceRange: [170, 240],
+        pipeHorizontalDistanceRange: [370, 380]
       }
     }
   }
@@ -238,15 +238,15 @@ class PlayScene extends BaseScene {
   }
 
   increaseDifficulty() {
-    if (this.score === 3) {
+    if (this.score === 4) {
       this.currentDifficulty = 'easy'
     }
 
-    if (this.score === 5) {
+    if (this.score === 8) {
       this.currentDifficulty = 'normal'
     }
 
-    if (this.score === 10) {
+    if (this.score === 12) {
       this.currentDifficulty = 'hard'
     }
   }
