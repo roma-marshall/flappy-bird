@@ -182,7 +182,7 @@ class PlayScene extends BaseScene {
 
   createPause() {
     this.isPaused = false
-    const pauseButton = this.add.image(this.config.width - 30,this.config.height - 70,'pause')
+    const pauseButton = this.add.image(this.config.width - 20,this.config.height - 70,'pause')
       .setInteractive()
       .setScale(3)
       .setOrigin(1)
