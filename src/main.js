@@ -15,7 +15,13 @@ const BIRD_POSITION = {
 const SHARED_CONFIG = {
     width: WIDTH,
     height: HEIGHT,
-    startPosition: BIRD_POSITION
+    startPosition: BIRD_POSITION,
+    scale: {
+        // Fit to window
+        mode: Phaser.Scale.FIT,
+        // Center vertically and horizontally
+        autoCenter: Phaser.Scale.CENTER_BOTH
+    },
 }
 
 const Scenes = [PreloadScene, MenuScene, ScoreScene, PlayScene, PauseScene]
