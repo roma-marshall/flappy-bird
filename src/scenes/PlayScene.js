@@ -254,12 +254,12 @@ class PlayScene extends BaseScene {
   increaseDifficulty() {
     if (this.score === 4) {
       this.currentDifficulty = 'easy'
-      this.bird.play('flyGreen')
+      // this.bird.play('flyGreen')
     }
 
     if (this.score === 12) {
       this.currentDifficulty = 'normal'
-      this.bird.play('flyGold')
+      // this.bird.play('flyGold')
     }
 
     if (this.score === 20) {
