@@ -18,7 +18,7 @@ const SHARED_CONFIG = {
     startPosition: BIRD_POSITION,
     scale: {
         // Fit to window
-        mode: Phaser.Scale.FIT,
+        // mode: Phaser.Scale.FIT,
         // Center vertically and horizontally
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
