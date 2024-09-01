@@ -3,6 +3,7 @@ import PlayScene from './scenes/PlayScene'
 import MenuScene from './scenes/MenuScene'
 import PreloadScene from './scenes/PreloadScene'
 import ScoreScene from './scenes/ScoreScene'
+import SettingsScene from './scenes/SettingsScene'
 import PauseScene from './scenes/PauseScene'
 
 const WIDTH = window.screen.width
@@ -24,7 +25,7 @@ const SHARED_CONFIG = {
     },
 }
 
-const Scenes = [PreloadScene, MenuScene, ScoreScene, PlayScene, PauseScene]
+const Scenes = [PreloadScene, MenuScene, ScoreScene, PlayScene, PauseScene, SettingsScene]
 const createScene = Scene => new Scene(SHARED_CONFIG)
 const initScenes = () => Scenes.map(createScene)
 

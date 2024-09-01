@@ -71,7 +71,7 @@ class PlayScene extends BaseScene {
       repeat: -1 // repeat unlimited times, loops
     })
 
-    this.bird.play('fly')
+    this.bird.play(localStorage.getItem('birdColor'))
   }
 
   update() {
