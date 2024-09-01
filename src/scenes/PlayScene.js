@@ -57,6 +57,20 @@ class PlayScene extends BaseScene {
       repeat: -1 // repeat unlimited times, loops
     })
 
+    this.anims.create({
+      key: 'flyGreen',
+      frames: this.anims.generateFrameNumbers('birdGreen', { start: 8, end: 15 }),
+      frameRate: 8, // 24 fps default
+      repeat: -1 // repeat unlimited times, loops
+    })
+
+    this.anims.create({
+      key: 'flyGold',
+      frames: this.anims.generateFrameNumbers('birdGold', { start: 8, end: 15 }),
+      frameRate: 8, // 24 fps default
+      repeat: -1 // repeat unlimited times, loops
+    })
+
     this.bird.play('fly')
   }
 
@@ -240,13 +254,15 @@ class PlayScene extends BaseScene {
   increaseDifficulty() {
     if (this.score === 4) {
       this.currentDifficulty = 'easy'
-    }
-
-    if (this.score === 8) {
-      this.currentDifficulty = 'normal'
+      this.bird.play('flyGreen')
     }
 
     if (this.score === 12) {
+      this.currentDifficulty = 'normal'
+      this.bird.play('flyGold')
+    }
+
+    if (this.score === 20) {
       this.currentDifficulty = 'hard'
     }
   }

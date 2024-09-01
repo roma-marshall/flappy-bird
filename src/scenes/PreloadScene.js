@@ -11,6 +11,14 @@ class PreloadScene extends Phaser.Scene {
       frameWidth: 16,
       frameHeight: 16
     })
+    this.load.spritesheet('birdGreen', 'assets/birdSpriteGreen.png', {
+      frameWidth: 16,
+      frameHeight: 16
+    })
+    this.load.spritesheet('birdGold', 'assets/birdSpriteGold.png', {
+      frameWidth: 16,
+      frameHeight: 16
+    })
     this.load.image('pipe', 'assets/pipe.png')
     this.load.image('pause', 'assets/pause.png')
     this.load.image('back', 'assets/back.png')
