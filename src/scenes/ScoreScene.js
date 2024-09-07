@@ -9,19 +9,14 @@ class ScoreScene extends BaseScene {
     super.create()
 
     const bestScore = localStorage.getItem('bestScore')
+    const birdObject = localStorage.getItem('birdObject')
+
     this.add.text(...this.screenCenter, `Score: ${bestScore || 0}`, this.fontOptions).setOrigin(0.5)
 
     this.add.image(70, 100, 'cloud').setOrigin(0)
     this.add.image(260, 200, 'cloud').setOrigin(0)
 
-    if (bestScore > 20) {
-      this.birdStatus('birdGreen')
-    }
-    if (bestScore > 40) {
-      this.birdStatus('birdGold')
-    } else {
-      this.birdStatus('bird')
-    }
+    this.birdStatus(birdObject)
   }
 
   birdStatus(birdColor) {

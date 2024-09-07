@@ -15,11 +15,11 @@ class SettingsScene extends BaseScene {
     this.add.image(70, 100, 'cloud').setOrigin(0)
     this.add.image(260, 200, 'cloud').setOrigin(0)
 
-    this.bird = this.physics.add.sprite(300, 200, 'bird')
+    const birdObject = localStorage.getItem('birdObject')
+    this.bird = this.physics.add.sprite(300, 200, birdObject)
       .setFlipX(true)
       .setScale(2)
       .setOrigin(0, 0)
-
 
     const bird = this.add.image(this.config.width / 2 - 50, this.config.height / 1.7, 'bird')
       .setFlipX(true)
@@ -27,8 +27,9 @@ class SettingsScene extends BaseScene {
       .setInteractive()
 
     bird.on('pointerup', () => {
-      this.scene.start('PlayScene')
+      this.scene.start('MenuScene')
       localStorage.setItem('birdColor', 'fly')
+      localStorage.setItem('birdObject', 'bird')
     })
 
 
@@ -38,8 +39,9 @@ class SettingsScene extends BaseScene {
       .setInteractive()
 
     birdGreen.on('pointerup', () => {
-      this.scene.start('PlayScene')
+      this.scene.start('MenuScene')
       localStorage.setItem('birdColor', 'flyGreen')
+      localStorage.setItem('birdObject', 'birdGreen')
     })
 
     const birdGold = this.add.image(this.config.width / 2 + 50, this.config.height / 1.7, 'birdGold')
@@ -48,8 +50,9 @@ class SettingsScene extends BaseScene {
       .setInteractive()
 
     birdGold.on('pointerup', () => {
-      this.scene.start('PlayScene')
+      this.scene.start('MenuScene')
       localStorage.setItem('birdColor', 'flyGold')
+      localStorage.setItem('birdObject', 'birdGold')
     })
 
 
