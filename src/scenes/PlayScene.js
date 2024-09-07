@@ -87,7 +87,7 @@ class PlayScene extends BaseScene {
 
     this.pauseEvent = this.events.on('resume', () => {
       this.initialTime = 3
-      this.countDownText = this.add.text(...this.screenCenter, 'Fly in: ' + this.initialTime, this.fontOptions).setOrigin(0.5)
+      this.countDownText = this.add.text(...this.screenCenter, this.initialTime, this.fontOptions).setOrigin(0.5)
       this.timedEvent = this.time.addEvent({
         delay: 1000,
         callback: this.countDown,
@@ -99,7 +99,7 @@ class PlayScene extends BaseScene {
 
   countDown () {
     this.initialTime--
-    this.countDownText.setText('Fly in: ' + this.initialTime)
+    this.countDownText.setText(this.initialTime)
     if (this.initialTime <= 0) {
       this.isPaused = false
       this.countDownText.setText('')
@@ -114,7 +114,7 @@ class PlayScene extends BaseScene {
       .setScale(2)
       .setOrigin(0, 0)
 
-    this.bird.setBodySize(this.bird.width, this.bird.height - 8)
+    this.bird.setBodySize(this.bird.width - 14, this.bird.height - 10)
     this.bird.body.gravity.y = 600
     this.bird.setCollideWorldBounds(true)
   }
