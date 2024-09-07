@@ -14,6 +14,9 @@ class BaseScene extends Phaser.Scene {
     if (!localStorage.getItem('birdObject'))
       localStorage.setItem('birdObject', 'bird')
 
+    if (!localStorage.getItem('birdColor'))
+      localStorage.setItem('birdColor', 'fly')
+
     this.add.image(0, 0, 'sky').setOrigin(0).setScale(2)
 
     if (this.config.canGoBack) {
